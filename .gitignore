@@ -1,0 +1,40 @@
+# Visual Studio temporary files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+# Build directories
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+# Compiled C/C++ files
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.pch
+*.ipch
+*.tlog
+*.lastbuildstate
+*.dll
+*.lib
+*.a
+
+# Other IDEs
+.idea/
+__pycache__/
+
+# Local environment
+.env
+.env.*
