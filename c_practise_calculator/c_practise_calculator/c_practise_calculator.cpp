@@ -3,12 +3,12 @@
 
 void calculator_menu()
 {
-	printf("|========================|\n");
-	printf("| [1] >> Addition        |\n");
-	printf("| [2] >> Minus           |\n");
-	printf("| [3] >> Division        |\n");
-	printf("| [4] >> Multiplication  |\n");
-	printf("|========================|\n");
+	printf("|=============================|\n");
+	printf("| [1] >> Addition         (+) |\n");
+	printf("| [2] >> Subtracrion      (-) |\n");
+	printf("| [3] >> Division         (/) |\n");
+	printf("| [4] >> Multiplication   (*) |\n");
+	printf("|=============================|\n");
 }
 
 void calculator_addition()
@@ -23,6 +23,16 @@ void calculator_addition()
 	printf("%d\n", a + b);
 }
 
+void calculator_subtraction()
+{
+	int a, b;
+	printf("Enter a: ");
+	scanf("%d", &a);
+	printf("Enter b: ");
+	scanf("%d", &b);
+	printf("Answer is: %d", a - b);
+}
+
 int main(void)
 {
 	char selection;
@@ -35,5 +45,11 @@ int main(void)
 	{
 		calculator_addition();
 	}
+	else if (selection == '2')
+	{
+		calculator_subtraction();
+	}
+
+
 	return 0;
 }
