@@ -19,8 +19,8 @@ void calculator_addition()
 	scanf("%d", &a);
 	printf("Enter b: ");
 	scanf("%d", &b);
-	printf("Answer: ");
-	printf("%d\n", a + b);
+	printf("Answer is: %d", a + b);
+	
 }
 
 void calculator_subtraction()
