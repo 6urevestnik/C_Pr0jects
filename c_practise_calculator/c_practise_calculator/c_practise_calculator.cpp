@@ -49,6 +49,10 @@ int main(void)
 	{
 		calculator_subtraction();
 	}
+	else
+	{
+		printf("Unknown operation");
+	}
 
 
 	return 0;
