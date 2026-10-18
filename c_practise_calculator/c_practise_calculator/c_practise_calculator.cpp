@@ -61,7 +61,7 @@ void calculator_division()
 	printf("\nEnter second number: ");
 	scanf("%d", &b);
 
-	if (b > 0)
+	if (b != 0)
 	{
 		printf("\nAnswer is: %d", a / b);
 	}
@@ -83,13 +83,14 @@ void calculator_multiplication()
 	printf("Answer is: %d", a * b);
 }
 
+/* [1] >> Калькулятор - выбор */
 void calculator_selection()
 {
 	char calculator_selection;
 
 	calculator_menu();
 	printf("Enter function number: ");
-	scanf("%c", &calculator_selection);
+	scanf(" %c", &calculator_selection);
 
 	if (calculator_selection == '1')
 	{
