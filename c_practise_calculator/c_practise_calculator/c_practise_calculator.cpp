@@ -1,6 +1,21 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+/* |============================================================================================================| */
+/* Главное меню */
+void main_menu()
+{
+	printf("|==========================================================|\n");
+	printf("|               -={Somethig else v1.0}=-                   |\n");
+	printf("|==========================================================|\n");
+	printf("| [1] >> Calculator         [2] >> Comaprison              |\n");
+	printf("| [?] >> ???                [?] >> ???                     |\n");
+	printf("|==========================================================|\n");
+}
+
+/* |============================================================================================================| */
+
+/* [1] >>> Калькулятор - меню, выбор, плюс, минус, деление, умножение  */
 void calculator_menu()
 {
 	printf("|=============================|\n");
@@ -10,7 +25,8 @@ void calculator_menu()
 	printf("| [4] >> Multiplication   (*) |\n");
 	printf("|=============================|\n");
 }
-
+ 
+/* [1] >> Калькулятор - сложение */
 void calculator_addition()
 {
 	int a, b;
@@ -23,9 +39,11 @@ void calculator_addition()
 	
 }
 
+/* [1] >> Калькулятор - вычитание */
 void calculator_subtraction()
 {
 	int a, b;
+
 	printf("Enter a: ");
 	scanf("%d", &a);
 	printf("Enter b: ");
@@ -33,9 +51,11 @@ void calculator_subtraction()
 	printf("Answer is: %d", a - b);
 }
 
+/* [1] >> Калькуялтор - деление */
 void calculator_division()
 {
 	int a, b;
+
 	printf("Enter first number: ");
 	scanf("%d", &a);
 	printf("\nEnter second number: ");
@@ -47,42 +67,43 @@ void calculator_division()
 	}
 	else
 	{
-		printf("Caution! Division by zero!");
+		printf("\nCaution! Division by zero!");
 	}
 }
 
+/* [1] >> Калькулятор - умножение */
 void calculator_multiplication()
 {
 	int a, b;
+
 	printf("Enter first number: ");
 	scanf("%d", &a);
 	printf("Enter second number: ");
 	scanf("%d", &b);
 	printf("Answer is: %d", a * b);
-
 }
 
-int main(void)
+void calculator_selection()
 {
-	char selection;
+	char calculator_selection;
 
 	calculator_menu();
-	printf("Select the function number : ");
-	scanf("%c", &selection);
+	printf("Enter function number: ");
+	scanf("%c", &calculator_selection);
 
-	if (selection == '1')
+	if (calculator_selection == '1')
 	{
 		calculator_addition();
 	}
-	else if (selection == '2')
+	else if (calculator_selection == '2')
 	{
 		calculator_subtraction();
 	}
-	else if (selection == '3')
+	else if (calculator_selection == '3')
 	{
 		calculator_division();
 	}
-	else if (selection == '4')
+	else if (calculator_selection == '4')
 	{
 		calculator_multiplication();
 	}
@@ -90,7 +111,28 @@ int main(void)
 	{
 		printf("Unknown operation");
 	}
+}
 
+/* |============================================================================================================| */
+
+int main(void)
+{
+	char main_menu_selection;
+
+	main_menu();
+
+	printf("Enter operation number: ");
+	scanf("%с", &main_menu_selection);
+
+	if (main_menu_selection == '1')
+	{
+		calculator_menu();
+		calculator_selection();
+	}
+	else
+	{
+		printf("Unknown operation");
+	}
 
 	return 0;
 }
