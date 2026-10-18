@@ -109,7 +109,7 @@ void calculator_selection()
 	}
 	else
 	{
-		printf("Unknown operation");
+		printf("Unknown operation 1");
 	}
 }
 
@@ -122,16 +122,15 @@ int main(void)
 	main_menu();
 
 	printf("Enter operation number: ");
-	scanf("%с", &main_menu_selection);
+	scanf("%c", &main_menu_selection);
 
 	if (main_menu_selection == '1')
 	{
-		calculator_menu();
 		calculator_selection();
 	}
 	else
 	{
-		printf("Unknown operation");
+		printf("Unknown operation 2");
 	}
 
 	return 0;
