@@ -1,7 +1,16 @@
 # define _CRT_SECURE_NO_WARNINGS
 # include <stdio.h>
 
-int main(void)
+void iq_test()
+{
+	int a;
+
+	printf("Enter your IQ: ");
+	scanf("%d", &a);
+	printf("%s\n", a >= 100 ? "Norm" : "Function unavailabel");
+}
+
+void if_test()
 {
 	int a;
 
@@ -10,17 +19,26 @@ int main(void)
 	printf("Enter number: ");
 	scanf("%d", &a);
 
-	if (a > 5) 
+	if (a > 5)
 	{
 		printf("First meaasge\n");
 	}
-	else 
+	else
 	{
 		printf("Second message\n");
 	}
 
 	printf("Third messge\n");
+}
+
+
+int main(void)
+{
+	iq_test();
+	return 0;
+
+}
 	
 
-	return 0;
-}
+
+
