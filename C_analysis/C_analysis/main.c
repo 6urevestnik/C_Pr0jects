@@ -34,7 +34,12 @@ void if_test()
 
 int main(void)
 {
-	iq_test();
+	int a, b;
+
+	printf("Enter two numbers: ");
+	scanf("%d %d", &a, &b);
+	printf("Largest number is %d. \n", (a > b) ? a : b);
+
 	return 0;
 
 }
