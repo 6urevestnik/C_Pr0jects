@@ -12,12 +12,14 @@ int main(void)
 
 	if (a > 5) 
 	{
-		printf("First meaasge");
+		printf("First meaasge\n");
 	}
 	else 
 	{
-		printf("Second message");
+		printf("Second message\n");
 	}
+
+	printf("Third messge\n");
 	
 
 	return 0;
